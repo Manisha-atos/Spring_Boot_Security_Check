@@ -31,6 +31,8 @@ jobs:
       # 4️⃣ OWASP Dependency-Check Scan (Action-based)
       - name: OWASP Dependency-Check Scan
         uses: dependency-check/Dependency-Check_Action@main
+        env:
+          JAVA_HOME: /opt/jdk   # ← This fixes the error: reset to match the action's Docker image JDK path
         with:
           project: SpringBoot-Security-Scan
           path: SpringAOPDemo          # 👈 IMPORTANT: scan subfolder
