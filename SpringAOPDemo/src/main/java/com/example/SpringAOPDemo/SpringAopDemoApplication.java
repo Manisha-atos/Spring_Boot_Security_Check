@@ -19,7 +19,7 @@ public class SpringAopDemoApplication implements CommandLineRunner{
 	//@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		bankService.depositAmount("ACC123", 500);
+		bankService.depositAmount("ACC123", 1500);
 		bankService.withdrawAmount("ACC123", 200);
 		bankService.transferFund("ACC123", "ACC456", 100);
 	}	
