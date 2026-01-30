@@ -28,7 +28,9 @@ jobs:
       # Build Spring Boot application
       - name: Build with Maven
         run: mvn clean package -DskipTests
-
+      - name: Build Spring Boot app
+        working-directory: SpringAOPDemo
+        run: mvn clean package -DskipTests
       # Run OWASP Dependency-Check
       - name: Run Security Scan
         run: |
